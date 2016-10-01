@@ -31,16 +31,82 @@ var churchillSpeech = {
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+  "use strict";
+  var favoriteAuthor = window.prompt("Who is your favorite author?");
+  
+  switch(favoriteAuthor) {
+	  case "churchill" :
+	  	console.log( speechesArray[0].author + " was " + speechesArray[0].authorAge + " during this speech" );
+		break;
+		
+	  case "ghandi" :
+	  	console.log( speechesArray[1].author + " was " + speechesArray[1].authorAge + " during this speech" );
+		break;
+		
+	  case "demosthenes" :
+	  	console.log( speechesArray[2].author + " was " + speechesArray[2].authorAge + " during this speech" );
+		break;
+		
+	  default:
+		console.log("Whoops. You mispelled their name");
+		break;
+	  
+  }
 });
-
+ 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
+  "use strict";
+  console.log( "This speech was written by " + speechesArray[0].author + " in " + speechesArray[0].year + ".");
+  
+  if (typeof speechesArray[0].yearIsBCE === false) {
+	  console.log( "This speech took place during the common era." );
+  }
+  else {
+	  console.log( "This speech took place before the common era." );
+  }
+  
+ if ( speechesArray[0].year > 342 && speechesArray[0].year >= 1940 ) {
+	 console.log("This is the most recent speech on the page");
+  }
+ else {
+	 console.log("This is the oldest speech on the page");
+  }
+ 
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
+  "use strict";
+    console.log( "This speech was written by " + speechesArray[1].author + " in " + speechesArray[1].year + ".");
+  if (typeof speechesArray[1].yearIsBCE === false) {
+	  console.log( "This speech took place during the common era." );
+  }
+  else {
+	  console.log( "This speech took place before the common era." );
+  }
+  if ( speechesArray[1].year > 342 && speechesArray[1].year >= 1940 ) {
+	 console.log("This is the most recent speech on the page");
+  }
+ else {
+	 console.log("This is the oldest speech on the page");
+  }
 });
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Demosthenes" button.
+  "use strict";
+   console.log( "This speech was written by " + speechesArray[2].author + " in " + speechesArray[2].year + ".");
+    if (typeof speechesArray[2].yearIsBCE === false) {
+	  console.log( "This speech took place during the common era." );
+  }
+  else {
+	  console.log( "This speech took place before the common era." );
+  }
+   if ( speechesArray[2].year > 342 && speechesArray[2].year > 1940 ) {
+	 console.log("This is the most recent speech on the page");
+  }
+ else {
+	 console.log("This is the oldest speech on the page");
+  }
 });
